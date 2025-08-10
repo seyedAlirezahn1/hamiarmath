@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>همیار ریاضی | دانلود برنامه پیشرفته ریاضی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+        html {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- ================= Header & Navigation ================ -->
+     <br><br><br>
+    <header id="header">
+        <nav class="nav-header">
+            <div class="nav-header-container">
+                <div class="nav-header-brand">
+                    <h1 class="nav-header-title">همیار ریاضی</h1>
+                    <div class="nav-header-logo">
+                        <i class="fas fa-square-root-variable"></i>
+                    </div>
+                </div>
+                <div class="nav-header-links">
+                    <a href="#contact" class="nav-link-header">تماس با ما</a>
+                    <a href="#faq" class="nav-link-header">سوالات متداول</a>
+                    <a href="#about" class="nav-link-header">درباره ما</a>
+                    <a href="#screenshots" class="nav-link-header">تصاویر</a>
+                    <a href="#download" class="nav-link-header">دانلود</a>
+                    <a href="#features" class="nav-link-header">ویژگی‌ها</a>
+                    <a href="#home" class="nav-link-header">خانه</a>
+                </div>
+                <div class="nav-mobile-btn-container">
+                    <button id="mobile-menu-button" class="nav-mobile-btn">
+                        <i class="fas fa-bars nav-mobile-btn-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="nav-mobile-menu">
+                <div class="nav-mobile-menu-links">
+                    <a href="#home" class="nav-link-mobile">خانه</a>
+                    <a href="#features" class="nav-link-mobile">ویژگی‌ها</a>
+                    <a href="#download" class="nav-link-mobile">دانلود</a>
+                    <a href="#screenshots" class="nav-link-mobile">تصاویر</a>
+                    <a href="#about" class="nav-link-mobile">درباره ما</a>
+                    <a href="#faq" class="nav-link-mobile">سوالات متداول</a>
+                    <a href="#contact" class="nav-link-mobile">تماس با ما</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ================= Main Content ================ -->
+    <main>
+        <!-- ========== Hero Section ========== -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-title-gradient">همیار ریاضی</span>
+                        <br>قدرتمندترین نرم‌افزار ریاضی
+                    </h1>
+                    <p class="hero-desc">
+                        با استفاده از برنامه همیار ریاضی، مسائل پیچیده ریاضی را به راحتی حل کنید. 
+                        ابزاری قدرتمند برای دانش‌آموزان، دانشجویان و معلمان با رابط کاربری زیبا و کاربرپسند.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#download" class="hero-btn-primary">
+                            <i class="fas fa-download hero-btn-icon"></i>
+                            دانلود رایگان
+                        </a>
+                        <a href="#features" class="hero-btn-secondary">
+                            ویژگی‌ها
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-graphic">
+                    <div class="hero-math-icon hero-math-icon-1">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="hero-math-icon hero-math-icon-2">
+                        <i class="fas fa-square-root-variable"></i>
+                    </div>
+                    <div class="hero-math-icon hero-math-icon-3">
+                        <i class="fas fa-divide"></i>
+                    </div>
+                    <div class="hero-math-icon hero-math-icon-4">
+                        <i class="fas fa-plus-minus"></i>
+                    </div>
+                    
+                    <!-- Video Container -->
+                    <div class="hero-video-container">
+                        <div class="hero-video-wrapper">
+                            <iframe 
+                                src="https://www.aparat.com/video/video/embed/videohash/tqzrwn2/vt/frame" 
+                                allowfullscreen
+                                webkitallowfullscreen
+                                mozallowfullscreen
+                                frameborder="0"
+                                scrolling="no"
+                                class="hero-video-iframe">
+                            </iframe>
+                        </div>
+                        <!-- Fallback content -->
+                        <div class="video-fallback" style="display: none;">
+                            <div class="video-placeholder">
+                                <i class="fas fa-play-circle"></i>
+                                <p>ویدئو در حال بارگذاری...</p>
+                                <a href="https://www.aparat.com/v/tqzrwn2" target="_blank" class="video-link">
+                                    مشاهده در آپارات
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-graphic-bg"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Features Section ========== -->
+        <section id="features" class="features-section">
+            <div class="features-container">
+                <div class="features-header">
+                    <h2 class="features-title">ویژگی‌های <span class="features-title-gradient">برجسته</span></h2>
+                    <p class="features-desc">
+                        برنامه همیار ریاضی با ابزارهای پیشرفته و کاربردی، تجربه حل مسائل ریاضی را متحول می‌کند.
+                    </p>
+                </div>
+                <div class="features-list">
+                    <!-- Feature 1 -->
+                    <div class="feature-card-main">
+                        <div class="feature-card-icon feature-card-icon-1">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="feature-card-title">ماشین حساب پیشرفته</h3>
+                        <p class="feature-card-desc">
+                            محاسبات پیچیده را با سرعت و دقت بالا انجام دهید 
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card-main">
+                        <div class="feature-card-icon feature-card-icon-2">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-card-title">رادیکال و توان بزرگ </h3>
+                        <p class="feature-card-desc">
+                            رادیکال ها و توان های خیلی بزرگ را به راحتی محاسبه کنید
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card-main">
+                        <div class="feature-card-icon feature-card-icon-3">
+                            <i class="fas fa-square-root-variable"></i>
+                        </div>
+                        <h3 class="feature-card-title">حل معادلات</h3>
+                        <p class="feature-card-desc">
+                            حل تمامی معادلات ریاضی با سرعت و دقت بالا
+                        </p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card-main">
+                        <div class="feature-card-icon feature-card-icon-4">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3 class="feature-card-title">ب.م.م و ک.م.م</h3>
+                        <p class="feature-card-desc">
+                            ب.م.م و ک.م.م دیگه سخت نیست خیلی آسون حل میشه
+                        </p>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="feature-card-main">
+                        <div class="feature-card-icon feature-card-icon-5">
+                            <i class="fas fa-table-cells"></i>
+                        </div>
+                        <h3 class="feature-card-title">محاسبات اشکال</h3>
+                        <p class="feature-card-desc">
+                            محاسبات هندسی مثل محیط و مساحت حلش آسونه
+                        </p>
+                    </div>
+                    <!-- Feature 6 -->
+                    <div class="feature-card-main">
+                        <div class="feature-card-icon feature-card-icon-6">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="feature-card-title">پشتیبانی با ربات استاد!!</h3>
+                        <p class="feature-card-desc">
+                            هر سوال و مسئله ای رو گیر کردی از ربات بپرس سریع جوابت رو میده
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Download Section ========== -->
+        <section id="download" class="download-section">
+            <div class="download-container">
+                <div class="download-header">
+                    <h2 class="download-title">دانلود <span class="download-title-gradient">نرم‌افزار</span></h2>
+                    <p class="download-desc">
+                        نسخه‌های مختلف نرم‌افزار همیار ریاضی را برای سیستم‌عامل‌های مختلف دانلود کنید.
+                    </p>
+                </div>
+                <div class="download-list">
+                    <!-- Windows Download -->
+                    <div class="download-card">
+                        <div class="download-version">نسخه ۲.۵.۱</div>
+                        <div class="download-os">
+                            <div class="download-icon download-icon-windows">
+                                <i class="fab fa-windows"></i>
+                            </div>
+                            <h3 class="download-os-title">ویندوز</h3>
+                            <p class="download-os-desc">ویندوز ۱۰ و ۱۱<br>حجم: ۴۵ مگابایت</p>
+                        </div>
+                        <a href="#" class="download-btn download-btn-windows">
+                            <i class="fas fa-download download-btn-icon"></i>
+                            دانلود
+                        </a>
+                    </div>
+                    <!-- Mac Download -->
+                    <div class="download-card">
+                        <div class="download-version">نسخه ۲.۵.۱</div>
+                        <div class="download-os">
+                            <div class="download-icon download-icon-mac">
+                                 <i class="fab fa-windows"></i>
+                            </div>
+                            <h3 class="download-os-title">پرتایل</h3>
+                            <p class="download-os-desc">ویندوز 7 به بالا<br>حجم: ۵۲ مگابایت</p>
+                        </div>
+                        <a href="#" class="download-btn download-btn-mac">
+                            <i class="fas fa-download download-btn-icon"></i>
+                            دانلود
+                        </a>
+                    </div>
+                    <!-- Linux Download -->
+                    <div class="download-card">
+                        <div class="download-version">نسخه ۲.۵.۱</div>
+                        <div class="download-os">
+                            <div class="download-icon download-icon-linux">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <h3 class="download-os-title">اندروید</h3>
+                            <p class="download-os-desc">تمامی نسخه های اندروید حتی گوشی های قدیمی<br>حجم: ۴۰ مگابایت</p>
+                        </div>
+                        <a href="#" class="download-btn download-btn-linux">
+                            <i class="fas fa-download download-btn-icon"></i>
+                            دانلود
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile Apps -->
+                <div class="download-mobile-apps">
+                    <h3 class="download-mobile-title">اپلیکیشن‌های موبایل</h3>
+                    <div class="download-mobile-btns">
+                        <a href="#" class="download-mobile-btn download-mobile-btn-android">
+                            <i class="fab fa-google-play download-mobile-btn-icon"></i>
+                            <div class="download-mobile-btn-text">
+                                <div class="download-mobile-btn-label">دریافت از</div>
+                                <div class="download-mobile-btn-store">گوگل پلی</div>
+                            </div>
+                        </a>
+                        <a href="#" class="download-mobile-btn download-mobile-btn-ios">
+                            <i class="fab fa-app-store-ios download-mobile-btn-icon"></i>
+                            <div class="download-mobile-btn-text">
+                                <div class="download-mobile-btn-label">دریافت از</div>
+                                <div class="download-mobile-btn-store">اپ استور</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Screenshots Section ========== -->
+        <section id="screenshots" class="screenshot-section">
+            <div class="screenshot-container">
+                <div class="screenshot-header">
+                    <h2 class="screenshot-title">تصاویر <span class="screenshot-title-gradient">نرم‌افزار</span></h2>
+                    <p class="screenshot-desc">
+                        با مشاهده تصاویر نرم‌افزار همیار ریاضی، با محیط کاربری و امکانات آن آشنا شوید.
+                    </p>
+                </div>
+                <div class="screenshot-carousel">
+                    <!-- Screenshot 1 -->
+                    <div class="screenshot-item">
+                        <div class="screenshot-window">
+                            <div class="screenshot-window-header">
+                                <div class="screenshot-window-dot screenshot-window-dot-red"></div>
+                                <div class="screenshot-window-dot screenshot-window-dot-yellow"></div>
+                                <div class="screenshot-window-dot screenshot-window-dot-green"></div>
+                                <div class="screenshot-window-title">ماشین حساب پیشرفته</div>
+                            </div>
+                            <div class="screenshot-window-body">
+                                <svg class="screenshot-svg">
+                                    <!-- Calculator UI -->
+                                    <rect x="50" y="10" width="300" height="180" rx="10" fill="#1e293b" />
+                                    <rect x="70" y="30" width="260" height="40" rx="5" fill="#0f172a" />
+                                    <text x="310" y="55" fill="#e2e8f0" font-size="18" text-anchor="end">123.45</text>
+                                    
+                                    <!-- Calculator buttons -->
+                                    <g>
+                                        <!-- Row 1 -->
+                                        <rect x="70" y="80" width="50" height="30" rx="5" fill="#334155" />
+                                        <text x="95" y="100" fill="#e2e8f0" font-size="14" text-anchor="middle">C</text>
+                                        
+                                        <rect x="130" y="80" width="50" height="30" rx="5" fill="#334155" />
+                                        <text x="155" y="100" fill="#e2e8f0" font-size="14" text-anchor="middle">±</text>
+                                        
+                                        <rect x="190" y="80" width="50" height="30" rx="5" fill="#334155" />
+                                        <text x="215" y="100" fill="#e2e8f0" font-size="14" text-anchor="middle">%</text>
+                                        
+                                        <rect x="250" y="80" width="80" height="30" rx="5" fill="#3b82f6" />
+                                        <text x="290" y="100" fill="#e2e8f0" font-size="14" text-anchor="middle">÷</text>
+                                        
+                                        <!-- Row 2 -->
+                                        <rect x="70" y="120" width="50" height="30" rx="5" fill="#1e293b" />
+                                        <text x="95" y="140" fill="#e2e8f0" font-size="14" text-anchor="middle">7</text>
+                                        
+                                        <rect x="130" y="120" width="50" height="30" rx="5" fill="#1e293b" />
+                                        <text x="155" y="140" fill="#e2e8f0" font-size="14" text-anchor="middle">8</text>
+                                        
+                                        <rect x="190" y="120" width="50" height="30" rx="5" fill="#1e293b" />
+                                        <text x="215" y="140" fill="#e2e8f0" font-size="14" text-anchor="middle">9</text>
+                                        
+                                        <rect x="250" y="120" width="80" height="30" rx="5" fill="#3b82f6" />
+                                        <text x="290" y="140" fill="#e2e8f0" font-size="14" text-anchor="middle">×</text>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 2 -->
+                    <div class="screenshot-item">
+                        <div class="screenshot-window">
+                            <div class="screenshot-window-header">
+                                <div class="screenshot-window-dot screenshot-window-dot-red"></div>
+                                <div class="screenshot-window-dot screenshot-window-dot-yellow"></div>
+                                <div class="screenshot-window-dot screenshot-window-dot-green"></div>
+                                <div class="screenshot-window-title">رسم نمودار</div>
+                            </div>
+                            <div class="screenshot-window-body">
+                                <svg class="screenshot-svg">
+                                    <!-- Graph UI -->
+                                    <rect x="20" y="10" width="360" height="180" rx="5" fill="#1e293b" />
+                                    
+                                    <!-- Grid -->
+                                    <g stroke="#334155" stroke-width="0.5">
+                                        <line x1="50" y1="20" x2="50" y2="170" />
+                                        <line x1="100" y1="20" x2="100" y2="170" />
+                                        <line x1="150" y1="20" x2="150" y2="170" />
+                                        <line x1="200" y1="20" x2="200" y2="170" />
+                                        <line x1="250" y1="20" x2="250" y2="170" />
+                                        <line x1="300" y1="20" x2="300" y2="170" />
+                                        <line x1="350" y1="20" x2="350" y2="170" />
+                                        
+                                        <line x1="50" y1="20" x2="350" y2="20" />
+                                        <line x1="50" y1="50" x2="350" y2="50" />
+                                        <line x1="50" y1="80" x2="350" y2="80" />
+                                        <line x1="50" y1="110" x2="350" y2="110" />
+                                        <line x1="50" y1="140" x2="350" y2="140" />
+                                        <line x1="50" y1="170" x2="350" y2="170" />
+                                    </g>
+                                    
+                                    <!-- Axes -->
+                                    <line x1="50" y1="95" x2="350" y2="95" stroke="#64748b" stroke-width="2" />
+                                    <line x1="200" y1="20" x2="200" y2="170" stroke="#64748b" stroke-width="2" />
+                                    
+                                    <!-- Function 1: Sine wave -->
+                                    <path d="M 50 95 C 80 65, 120 65, 150 95 C 180 125, 220 125, 250 95 C 280 65, 320 65, 350 95" 
+                                        fill="none" stroke="#3b82f6" stroke-width="3" />
+                                            
+                                    <!-- Function 2: Parabola -->
+                                    <path d="M 80 160 Q 200 30, 320 160" 
+                                        fill="none" stroke="#8b5cf6" stroke-width="3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Screenshot 3 -->
+                    <div class="screenshot-item">
+                        <div class="screenshot-window">
+                            <div class="screenshot-window-header">
+                                <div class="screenshot-window-dot screenshot-window-dot-red"></div>
+                                <div class="screenshot-window-dot screenshot-window-dot-yellow"></div>
+                                <div class="screenshot-window-dot screenshot-window-dot-green"></div>
+                                <div class="screenshot-window-title">حل معادلات</div>
+                            </div>
+                            <div class="screenshot-window-body">
+                                <svg class="screenshot-svg">
+                                    <!-- Equation Solver UI -->
+                                    <rect x="30" y="10" width="340" height="180" rx="5" fill="#1e293b" />
+                                    
+                                    <!-- Input area -->
+                                    <rect x="50" y="30" width="300" height="40" rx="5" fill="#0f172a" />
+                                    <text x="70" y="55" fill="#e2e8f0" font-size="16">x² + 5x + 6 = 0</text>
+                                    
+                                    <!-- Solution area -->
+                                    <rect x="50" y="80" width="300" height="90" rx="5" fill="#0f172a" />
+                                    <text x="70" y="105" fill="#e2e8f0" font-size="14">حل معادله:</text>
+                                    <text x="70" y="130" fill="#3b82f6" font-size="14">x₁ = -2</text>
+                                    <text x="70" y="155" fill="#3b82f6" font-size="14">x₂ = -3</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <button class="screenshot-nav-btn screenshot-nav-btn-prev">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="screenshot-nav-btn screenshot-nav-btn-next">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- ========== About Us Section ========== -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <h2 class="about-title">درباره <span class="about-title-gradient">ما</span></h2>
+                    <p class="about-desc">داستان ما و چگونگی توسعه نرم‌افزار همیار ریاضی</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-story">
+                        <h3 class="about-story-title">داستان ما</h3>
+                        <p class="about-story-desc">
+                            شرکت نرم‌افزاری نوین در سال ۱۳۹۵ با هدف توسعه نرم‌افزارهای آموزشی کاربردی تأسیس شد. تیم ما متشکل از متخصصان ریاضی، برنامه‌نویسان و طراحان رابط کاربری است که با همکاری یکدیگر، نرم‌افزار همیار ریاضی را توسعه داده‌اند.
+                        </p>
+                        <p class="about-story-desc">
+                            هدف ما ساده‌سازی مفاهیم پیچیده ریاضی و ارائه ابزاری کاربردی برای دانش‌آموزان، دانشجویان و معلمان است. ما معتقدیم که یادگیری ریاضی می‌تواند لذت‌بخش و جذاب باشد.
+                        </p>
+                        <p class="about-story-desc">
+                            نرم‌افزار همیار ریاضی تاکنون بیش از ۵۰۰,۰۰۰ بار دانلود شده و در بیش از ۱۰۰ مدرسه و دانشگاه مورد استفاده قرار گرفته است.
+                        </p>
+                    </div>
+                    <div class="about-team">
+                        <h3 class="about-team-title">تیم ما</h3>
+                        <div class="about-team-list">
+                            <div class="about-team-member">
+                                <div class="about-team-avatar about-team-avatar-blue"><i class="fas fa-user"></i></div>
+                                <h4 class="about-team-name">سید علیرضا حسینی نسب</h4>
+                                <p class="about-team-role">برنامه نویس و توسعه دهنده</p>
+                            </div>
+                            <div class="about-team-member">
+                                <div class="about-team-avatar about-team-avatar-purple"><i class="fas fa-user"></i></div>
+                                <h4 class="about-team-name">علیرضا نصیرانی</h4>
+                                <p class="about-team-role">برنامه نویس و توسعه دهنده</p>
+                            </div>
+                            <div class="about-team-member">
+                                <div class="about-team-avatar about-team-avatar-green"><i class="fas fa-user"></i></div>
+                                <h4 class="about-team-name">محود رضا سیمی</h4>
+                                <p class="about-team-role">متخصص ریاضی</p>
+                            </div>
+                            <div class="about-team-member">
+                                <div class="about-team-avatar about-team-avatar-yellow"><i class="fas fa-user"></i></div>
+                                <h4 class="about-team-name">مهندس نیلوفر احمدی</h4>
+                                <p class="about-team-role">طراح رابط کاربری</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-testimonials">
+                    <h3 class="about-testimonials-title">نظرات کاربران</h3>
+                    <div class="about-testimonials-list">
+                        <div class="about-testimonial-card">
+                            <div class="about-testimonial-avatar about-testimonial-avatar-blue">م</div>
+                            <div>
+                                <h4 class="about-testimonial-name">مریم حسینی</h4>
+                                <p class="about-testimonial-role">دانشجوی مهندسی</p>
+                            </div>
+                            <p class="about-testimonial-text">"نرم‌افزار همیار ریاضی به من کمک کرد تا مفاهیم پیچیده ریاضی را بهتر درک کنم. رابط کاربری زیبا و امکانات متنوع آن واقعاً عالی است."</p>
+                            <div class="about-testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="about-testimonial-card">
+                            <div class="about-testimonial-avatar about-testimonial-avatar-green">ر</div>
+                            <div>
+                                <h4 class="about-testimonial-name">رضا کاظمی</h4>
+                                <p class="about-testimonial-role">دبیر ریاضی</p>
+                            </div>
+                            <p class="about-testimonial-text">"به عنوان یک معلم ریاضی، این نرم‌افزار ابزار بسیار مفیدی برای آموزش مفاهیم ریاضی به دانش‌آموزان است. قابلیت نمایش مراحل حل مسائل بسیار کاربردی است."</p>
+                            <div class="about-testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="about-testimonial-card">
+                            <div class="about-testimonial-avatar about-testimonial-avatar-purple">س</div>
+                            <div>
+                                <h4 class="about-testimonial-name">سعید محمودی</h4>
+                                <p class="about-testimonial-role">دانش‌آموز</p>
+                            </div>
+                            <p class="about-testimonial-text">"با استفاده از این نرم‌افزار، نمره ریاضی من بهبود چشمگیری داشته است. توضیحات گام به گام و رسم نمودارها به من کمک کرد تا مفاهیم را بهتر درک کنم."</p>
+                            <div class="about-testimonial-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== FAQ Section ========== -->
+        <section id="faq" class="faq-section">
+            <div class="faq-container">
+                <div class="faq-header">
+                    <h2 class="faq-title">سوالات <span class="faq-title-gradient">متداول</span></h2>
+                    <p class="faq-desc">پاسخ به سوالات رایج درباره نرم‌افزار همیار ریاضی</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question-text">آیا نرم‌افزار همیار ریاضی رایگان است؟</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>بله نرم افزار ریاضی کاملا رایگان است</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question-text">آیا نرم‌افزار به اینترنت نیاز دارد؟</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>خیر، نرم‌افزار همیار ریاضی به صورت آفلاین کار می‌کند و نیازی به اتصال اینترنت ندارد. تنها برای دریافت به‌روزرسانی‌ها و استفاده از برخی ویژگی‌های آنلاین مانند حل مسائل با ربات به اینترنت نیاز خواهید داشت.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question-text">آیا نرم‌افزار برای دانش‌آموزان مناسب است؟</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>بله، نرم‌افزار همیار ریاضی برای دانش‌آموزان مقاطع مختلف تحصیلی طراحی شده است. با توجه به سطح دانش ریاضی، می‌توانید از بخش‌های مختلف نرم‌افزار استفادهکنید..</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question-text">چگونه می‌توانم نرم‌افزار را به‌روزرسانی کنم؟</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>میتوانید به سایت نرم افزار مراجعه کنید و در صورت مشاهده نسخه جدید آن را دانلود و نصب کنید</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span class="faq-question-text">آیا پشتیبانی فنی ارائه می‌دهید؟</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>بله، ما پشتیبانی فنی ۲۴ به کاربران ارائه میدهیم </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Contact Section ========== -->
+        <section id="contact"class="contact-section">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <h2 class="contact-title">تماس با <span class="contact-title-gradient">ما</span></h2>
+                    <p class="contact-desc">سوالات، پیشنهادات یا انتقادات خود را با ما در میان بگذارید.</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 class="contact-info-title">اطلاعات تماس</h3>
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon-blue"><i class="fas fa-envelope"></i></div>
+                                <div>
+                                    <div class="contact-info-label">ایمیل</div>
+                                    <div class="contact-info-value">info@riazinovin.ir</div>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon-green"><i class="fas fa-phone"></i></div>
+                                <div>
+                                    <div class="contact-info-label">تلفن</div>
+                                    <div class="contact-info-value">۰۲۱-۱۲۳۴۵۶۷۸</div>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon-purple"><i class="fas fa-map-marker-alt"></i></div>
+                                <div>
+                                    <div class="contact-info-label">آدرس</div>
+                                    <div class="contact-info-value">تهران، خیابان آزادی، پلاک ۱۲۳، طبقه ۴</div>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon contact-info-icon-yellow"><i class="fas fa-clock"></i></div>
+                                <div>
+                                    <div class="contact-info-label">ساعات کاری</div>
+                                    <div class="contact-info-value">شنبه تا چهارشنبه: ۹ صبح تا ۵ عصر</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-socials">
+                            <div class="contact-socials-title">ما را در شبکه‌های اجتماعی دنبال کنید</div>
+                            <div class="contact-social-links">
+                                <a href="#" class="contact-social-link contact-social-link-instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="contact-social-link contact-social-link-telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="#" class="contact-social-link contact-social-link-twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="contact-social-link contact-social-link-linkedin"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-box">
+                        <h3 class="contact-form-title">ارسال پیام</h3>
+                        <form class="contact-form" id="contact-form">
+                            <div class="contact-form-group">
+                                <label for="name" class="contact-form-label">نام</label>
+                                <input type="text" id="name" class="contact-form-input">
+                            </div>
+                            <div class="contact-form-group">
+                                <label for="email" class="contact-form-label">ایمیل</label>
+                                <input type="email" id="email" class="contact-form-input">
+                            </div>
+                            <div class="contact-form-group">
+                                <label for="subject" class="contact-form-label">موضوع</label>
+                                <input type="text" id="subject" class="contact-form-input">
+                            </div>
+                            <div class="contact-form-group">
+                                <label for="message" class="contact-form-label">پیام</label>
+                                <textarea id="message" rows="4" class="contact-form-textarea"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="contact-form-btn">ارسال پیام</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ========== Footer ========== -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="footer-brand-logo"><i class="fas fa-square-root-variable"></i></div>
+                    <div class="footer-brand-title">همیار ریاضی</div>
+                    <div class="footer-brand-desc">ابزاری قدرتمند برای حل مسائل ریاضی با رابط کاربری زیبا و کاربرپسند.</div>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social-link footer-social-link-twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link footer-social-link-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link footer-social-link-telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="footer-social-link footer-social-link-linkedin"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-title">لینک‌های سریع</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#home" class="footer-link">خانه</a></li>
+                        <li><a href="#features" class="footer-link">ویژگی‌ها</a></li>
+                        <li><a href="#download" class="footer-link">دانلود</a></li>
+                        <li><a href="#screenshots" class="footer-link">تصاویر</a></li>
+                        <li><a href="#about" class="footer-link">درباره ما</a></li>
+                        <li><a href="#faq" class="footer-link">سوالات متداول</a></li>
+                        <li><a href="#contact" class="footer-link">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-title">ابزارها</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link">ماشین حساب</a></li>
+                        <li><a href="#" class="footer-link">رسم نمودار</a></li>
+                        <li><a href="#" class="footer-link">حل معادلات</a></li>
+                        <li><a href="#" class="footer-link">ماتریس‌ها</a></li>
+                        <li><a href="#" class="footer-link">حساب دیفرانسیل</a></li>
+                        <li><a href="#" class="footer-link">آمار و احتمال</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-title">پشتیبانی</div>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link">راهنمای استفاده</a></li>
+                        <li><a href="#" class="footer-link">سوالات متداول</a></li>
+                        <li><a href="#" class="footer-link">گزارش مشکل</a></li>
+                        <li><a href="#" class="footer-link">درخواست ویژگی جدید</a></li>
+                        <li><a href="#" class="footer-link">انجمن کاربران</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © ۱۴۰۲ همیار ریاضی. تمامی حقوق محفوظ است.
+            </div>
+        </footer>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
