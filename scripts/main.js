@@ -45,7 +45,7 @@ if (carousel && prevButton && nextButton && screenshots.length > 0) {
       updateCarousel();
     }
   });
-  function updateCarousel() {
+  let updateCarousel = () => {
     const itemWidth = screenshots[0].offsetWidth;
     carousel.scrollTo({
       left: currentIndex * itemWidth,

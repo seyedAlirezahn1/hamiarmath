@@ -23,10 +23,12 @@
         <nav class="nav-header">
             <div class="nav-header-container">
                 <div class="nav-header-brand">
-                    <h1 class="nav-header-title">همیار ریاضی</h1>
-                    <div class="nav-header-logo">
-                        <i class="fas fa-square-root-variable"></i>
-                    </div>
+                    <a href="#home" class="link-home-header">
+                        <h1 class="nav-header-title">همیار ریاضی</h1>
+                        <div class="nav-header-logo">
+                            <i class="fas fa-square-root-variable"></i>
+                        </div>
+                    </a>
                 </div>
                 <div class="nav-header-links">
                     <a href="#contact" class="nav-link-header">تماس با ما</a>
@@ -479,7 +481,7 @@
                     <div class="about-story">
                         <h3 class="about-story-title">داستان ما</h3>
                         <p class="about-story-desc">
-                            شرکت نرم‌افزاری نوین در سال ۱۳۹۵ با هدف توسعه نرم‌افزارهای آموزشی کاربردی تأسیس شد. تیم ما
+                            شرکت نرم‌افزاری نوین در سال 1402 با هدف توسعه نرم‌افزارهای آموزشی کاربردی تأسیس شد. تیم ما
                             متشکل از متخصصان ریاضی، برنامه‌نویسان و طراحان رابط کاربری است که با همکاری یکدیگر،
                             نرم‌افزار همیار ریاضی را توسعه داده‌اند.
                         </p>
@@ -508,14 +510,14 @@
                             </div>
                             <div class="about-team-member">
                                 <div class="about-team-avatar about-team-avatar-green"><i class="fas fa-user"></i></div>
-                                <h4 class="about-team-name">محود رضا سیمی</h4>
+                                <h4 class="about-team-name">استاد محمود رضا سیمی</h4>
                                 <p class="about-team-role">متخصص ریاضی</p>
                             </div>
                             <div class="about-team-member">
                                 <div class="about-team-avatar about-team-avatar-yellow"><i class="fas fa-user"></i>
                                 </div>
-                                <h4 class="about-team-name">مهندس نیلوفر احمدی</h4>
-                                <p class="about-team-role">طراح رابط کاربری</p>
+                                <h4 class="about-team-name">آقای ذرافشان</h4>
+                                <p class="about-team-role">راهنما</p>
                             </div>
                         </div>
                     </div>
@@ -662,7 +664,7 @@
                                 </div>
                                 <div>
                                     <div class="contact-info-label">تلفن</div>
-                                    <div class="contact-info-value">۰۲۱-۱۲۳۴۵۶۷۸</div>
+                                    <div class="contact-info-value">09945256616</div>
                                 </div>
                             </div>
                             <div class="contact-info-item">
@@ -670,7 +672,7 @@
                                         class="fas fa-map-marker-alt"></i></div>
                                 <div>
                                     <div class="contact-info-label">آدرس</div>
-                                    <div class="contact-info-value">تهران، خیابان آزادی، پلاک ۱۲۳، طبقه ۴</div>
+                                    <div class="contact-info-value">یزد میبد دبیرستان شهید یحیی ذوالفقاری</div>
                                 </div>
                             </div>
                             <div class="contact-info-item">
@@ -678,7 +680,7 @@
                                 </div>
                                 <div>
                                     <div class="contact-info-label">ساعات کاری</div>
-                                    <div class="contact-info-value">شنبه تا چهارشنبه: ۹ صبح تا ۵ عصر</div>
+                                    <div class="contact-info-value">شنبه تا چهارشنبه:8تا 12 شب</div>
                                 </div>
                             </div>
                         </div>
@@ -698,7 +700,7 @@
                     </div>
                     <div class="contact-form-box">
                         <h3 class="contact-form-title">ارسال پیام</h3>
-                        <form class="contact-form" id="contact-form">
+                        <form class="contact-form" id="contact-form" action="/submit" method="POST">
                             <div class="contact-form-group">
                                 <label for="name" class="contact-form-label">نام</label>
                                 <input type="text" id="name" name="name" class="contact-form-input" required>
@@ -713,13 +715,13 @@
                             </div>
                             <div class="contact-form-group">
                                 <label for="message" class="contact-form-label">پیام</label>
-                                <textarea id="message" name="message" rows="4" class="contact-form-textarea"
-                                    required></textarea>
+                                <textarea id="message" name="message" rows="4" class="contact-form-textarea" required></textarea>
                             </div>
                             <div>
                                 <button type="submit" class="contact-form-btn">ارسال پیام</button>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -759,27 +761,26 @@
                 <div class="footer-links">
                     <div class="footer-links-title">ابزارها</div>
                     <ul class="footer-links-list">
-                        <li><a href="#" class="footer-link">ماشین حساب</a></li>
-                        <li><a href="#" class="footer-link">رسم نمودار</a></li>
-                        <li><a href="#" class="footer-link">حل معادلات</a></li>
-                        <li><a href="#" class="footer-link">ماتریس‌ها</a></li>
-                        <li><a href="#" class="footer-link">حساب دیفرانسیل</a></li>
-                        <li><a href="#" class="footer-link">آمار و احتمال</a></li>
+                        <li><a href="#features" class="footer-link">ماشین حساب پیشرفته</a></li>
+                        <li><a href="#features" class="footer-link">رادیکال و توان بزرگ </a></li>
+                        <li><a href="#features" class="footer-link">حل معادلات</a></li>
+                        <li><a href="#features" class="footer-link">ب.م.م و ک.م.م</a></li>
+                        <li><a href="#features" class="footer-link">محاسبات اشکال</a></li>
+                        <li><a href="#features" class="footer-link">پشتیبانی با ربات استاد!</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <div class="footer-links-title">پشتیبانی</div>
                     <ul class="footer-links-list">
-                        <li><a href="#" class="footer-link">راهنمای استفاده</a></li>
-                        <li><a href="#" class="footer-link">سوالات متداول</a></li>
-                        <li><a href="#" class="footer-link">گزارش مشکل</a></li>
-                        <li><a href="#" class="footer-link">درخواست ویژگی جدید</a></li>
-                        <li><a href="#" class="footer-link">انجمن کاربران</a></li>
+                        <li><a href="#home" class="footer-link">راهنمای استفاده</a></li>
+                        <li><a href="#faq" class="footer-link">سوالات متداول</a></li>
+                        <li><a href="#contact" class="footer-link">گزارش مشکل</a></li>
+                        <li><a href="#contact" class="footer-link">درخواست ویژگی جدید</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-copyright">
-                © ۱۴۰۲ همیار ریاضی. تمامی حقوق محفوظ است.
+                © ۱۴۰4 همیار ریاضی. تمامی حقوق محفوظ است.
             </div>
         </footer>
 

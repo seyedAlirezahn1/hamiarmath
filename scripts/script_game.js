@@ -25,35 +25,35 @@ function startGame(difficulty) {
   totalQuestions = 0;
   correctAnswers = 0;
   timeLeft = 60;
-  isEquationMode = (difficulty === 'equation');
+  isEquationMode = difficulty === "equation";
 
   // Update UI
   document.getElementById("main-menu").classList.add("hidden");
-  
+
   if (isEquationMode) {
     document.getElementById("equation-section").classList.remove("hidden");
     document.getElementById("game-section").classList.add("hidden");
     document.getElementById("game-over").classList.add("hidden");
-    
+
     // Start equation timer
     startEquationTimer();
-    
+
     // Generate first equation
     generateEquation();
-    
+
     // Focus on equation input
     document.getElementById("equation-answer-input").focus();
   } else {
     document.getElementById("game-section").classList.remove("hidden");
     document.getElementById("equation-section").classList.add("hidden");
     document.getElementById("game-over").classList.add("hidden");
-    
+
     // Start regular timer
     startTimer();
-    
+
     // Generate first question
     generateQuestion();
-    
+
     // Focus on input
     document.getElementById("answer-input").focus();
   }
@@ -91,16 +91,16 @@ function generateQuestion() {
 function generateEquation() {
   const equationTypes = ["simple", "addition", "subtraction", "multiplication"];
   const type = equationTypes[Math.floor(Math.random() * equationTypes.length)];
-  
+
   let equation, answer;
-  
+
   switch (type) {
     case "simple":
       // Simple equations like x = 5
       answer = Math.floor(Math.random() * 20) + 1;
       equation = `x = ${answer}`;
       break;
-      
+
     case "addition":
       // Equations like x + 3 = 8
       const addend = Math.floor(Math.random() * 10) + 1;
@@ -108,7 +108,7 @@ function generateEquation() {
       answer = sum - addend;
       equation = `x + ${addend} = ${sum}`;
       break;
-      
+
     case "subtraction":
       // Equations like x - 2 = 7
       const subtrahend = Math.floor(Math.random() * 10) + 1;
@@ -116,7 +116,7 @@ function generateEquation() {
       answer = difference + subtrahend;
       equation = `x - ${subtrahend} = ${difference}`;
       break;
-      
+
     case "multiplication":
       // Equations like 3x = 15
       const multiplier = Math.floor(Math.random() * 8) + 2;
@@ -125,12 +125,12 @@ function generateEquation() {
       equation = `${multiplier}x = ${product}`;
       break;
   }
-  
+
   currentQuestion = { question: equation, answer: answer };
   document.getElementById("equation-text").textContent = equation;
   document.getElementById("equation-answer-input").value = "";
   document.getElementById("equation-feedback").classList.add("hidden");
-  
+
   // Update equation progress bar
   updateEquationProgressBar();
 }
@@ -262,8 +262,12 @@ function generateSuperHardQuestion() {
     answer = Math.pow(base, exponent);
   } else {
     // Generate root questions (e.g., √16, √25)
-    const perfectSquares = [4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961];
-    const squareRoot = perfectSquares[Math.floor(Math.random() * perfectSquares.length)];
+    const perfectSquares = [
+      4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324,
+      361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961,
+    ];
+    const squareRoot =
+      perfectSquares[Math.floor(Math.random() * perfectSquares.length)];
     question = `√${squareRoot} = ?`;
     answer = Math.sqrt(squareRoot);
   }
@@ -307,7 +311,9 @@ function checkAnswer() {
 
 // Check equation answer
 function checkEquationAnswer() {
-  const userAnswer = parseInt(document.getElementById("equation-answer-input").value);
+  const userAnswer = parseInt(
+    document.getElementById("equation-answer-input").value
+  );
   const feedback = document.getElementById("equation-feedback");
   const feedbackText = document.getElementById("equation-feedback-text");
 
@@ -369,12 +375,12 @@ function calculatePoints() {
 // Calculate points for equations
 function calculateEquationPoints() {
   let basePoints = 30; // Higher points for equations as they're more challenging
-  
+
   // Bonus points for quick answers
   if (timeLeft > 45) basePoints += 10;
   else if (timeLeft > 30) basePoints += 6;
   else if (timeLeft > 15) basePoints += 3;
-  
+
   return basePoints;
 }
 
@@ -522,7 +528,10 @@ document.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     if (!document.getElementById("answer-input").disabled && !isEquationMode) {
       checkAnswer();
-    } else if (!document.getElementById("equation-answer-input").disabled && isEquationMode) {
+    } else if (
+      !document.getElementById("equation-answer-input").disabled &&
+      isEquationMode
+    ) {
       checkEquationAnswer();
     }
   }
