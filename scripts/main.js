@@ -122,6 +122,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+
+//skjd
+
 // Hide scrollbar but keep functionality
 document.head.insertAdjacentHTML(
   "beforeend",
