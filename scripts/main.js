@@ -25,55 +25,39 @@ document.querySelectorAll(".faq-question").forEach((question) => {
 });
 
 // Screenshot carousel navigation
-const carousel = document.querySelector(".screenshot-carousel");
-const prevButton = document.querySelector(".screenshot-nav-btn-prev");
-const nextButton = document.querySelector(".screenshot-nav-btn-next");
-const screenshots = document.querySelectorAll(".screenshot-item");
+var currentIndex = 1;
 
-let currentIndex = 0;
+function displaySlide(n) {
+  currentIndex = n;
+  var slides = document.getElementsByClassName("slide");
+  var dots = document.getElementsByClassName("dot");
+  var slno = document.getElementById("slide-no");
 
-if (carousel && prevButton && nextButton && screenshots.length > 0) {
-  prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  });
-  nextButton.addEventListener("click", () => {
-    if (currentIndex < screenshots.length - 1) {
-      currentIndex++;
-      updateCarousel();
-    }
-  });
-  let updateCarousel = () => {
-    const itemWidth = screenshots[0].offsetWidth;
-    carousel.scrollTo({
-      left: currentIndex * itemWidth,
-      behavior: "smooth",
-    });
+  if (currentIndex > slides.length) {
+    currentIndex = 1;
   }
+  if (currentIndex < 1) {
+    currentIndex = slides.length;
+  }
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[currentIndex - 1].style.display = "block";
+  dots[currentIndex - 1].className = "dot active";
+  slno.innerHTML = currentIndex + "/" + slides.length;
 }
 
-// Contact form submission (new selectors)
-const contactForm = document.querySelector(".contact-form");
-if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    // Get form values
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
-    // Validate form (simple validation)
-    if (!name || !email || !subject || !message) {
-      alert("لطفاً تمامی فیلدها را پر کنید.");
-      return;
-    }
-    // In a real application, you would send this data to a server
-    // For demo purposes, we'll just show a success message
-    alert("پیام شما با موفقیت ارسال شد. با تشکر از تماس شما!");
-    contactForm.reset();
-  });
+displaySlide(currentIndex);
+
+function changeSlide(n) {
+  currentIndex += n;
+  displaySlide(currentIndex);
+}
+
+function currentSlide(n) {
+  displaySlide(n);
 }
 
 // Video iframe management
@@ -187,3 +171,59 @@ document.head.insertAdjacentHTML(
     }
   }
 })();
+
+//contact-form
+function showToast(message, type = "success") {
+  const toast = document.getElementById("toast");
+  toast.className = "";
+  toast.innerText = message;
+  toast.classList.add("show");
+  toast.classList.add(type);
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
+// تابع Escape برای MarkdownV2 تلگرام
+function escapeMarkdownV2(text) {
+  return text.replace(/([_*[\]()~`>#+\-=|{}.!])/g, "\\$1");
+}
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const name = String(document.getElementById("name").value || "");
+    const email = String(document.getElementById("email").value || "");
+    const subject = String(document.getElementById("subject").value || "");
+    const message = String(document.getElementById("message").value || "");
+
+    if (!message) {
+      showToast("پیام نمی‌تواند خالی باشد!", "error");
+      return;
+    }
+
+    // فقط متن Escape شده، هیچ JSON اضافی
+    const textMessage = escapeMarkdownV2(
+      `نام: ${name}\nایمیل: ${email}\nموضوع: ${subject}\nپیام: ${message}`
+    );
+
+    try {
+      await fetch(
+        "https://cloud.activepieces.com/api/v1/webhooks/hNVNCWytQ2DZkGKa0kOA6",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          // فقط فیلد text ساده را بفرستید
+          body: JSON.stringify({ text: textMessage }),
+        }
+      );
+
+      showToast("✅ پیام شما با موفقیت ارسال شد!", "success");
+      document.getElementById("contact-form").reset();
+    } catch (err) {
+      showToast("❌ ارتباط با سرور برقرار نشد!", "error");
+    }
+  });
