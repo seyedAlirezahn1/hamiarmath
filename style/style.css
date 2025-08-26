@@ -766,34 +766,36 @@ body {
 }
 
 /* Screenshots Section */
-.screenshot-header {/*******************************/
+.screenshot-header {
   text-align: center;
   margin-bottom: 4rem;
 }
-.screenshot-title {/******************************/
+
+.screenshot-title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.screenshot-title-gradient{
+.screenshot-title-gradient {
   background: linear-gradient(90deg, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.screenshot-desc {/*******************/
+.screenshot-desc {
   color: #94a3b8;
 }
 
 .slide-container {
-  max-width: fit-content;
-  /* width: auto; */
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
+
 
 .slides {
   display: none;
@@ -804,31 +806,29 @@ body {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  transform: translateY(-50%);
+  padding: 12px;
   color: #FFF;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 20px;
-  
+  border-radius: 50%;
+  background: rgba(0,0,0,0.4);
 }
 
 .next {
-  right: 455px;
-  border-radius: 3px 0 0 3px;
-  border-radius: 20px;
+  right: 10px;
 }
 
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.prev {
+  left: 10px;
 }
-.prev:hover{
+
+.prev:hover {
   box-shadow: 2px 2px 30px rgb(247, 0, 255);
 }
-.next:hover{
+
+.next:hover {
   box-shadow: 2px 2px 30px rgb(0, 119, 255);
 }
 
@@ -842,6 +842,7 @@ body {
   text-align: center;
 }
 
+
 .slide-no {
   color: #FFF;
   font-size: 12px;
@@ -852,9 +853,9 @@ body {
 
 .dot {
   cursor: pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -867,17 +868,6 @@ body {
 }
 
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes slideInDown {
   0% {
     opacity: 0;
@@ -888,17 +878,48 @@ body {
   }
 }
 
-.fade {
-  -webkit-animation-name: fade;
-  -moz-animation-name: fade;
-  -o-animation-name: fade;
-  animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  width: 500px;
-  height: 500px;
+@keyframes fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
+.fade {
+  animation: fade 1.2s;
+  width: 100%;
+  max-width: 900px;   /* روی دسکتاپ تا این اندازه می‌مونه */
+  margin: auto;
+}
+.fade img {
+  width: 100%;
+  height: auto;        /* ارتفاع خودکار میشه */
+  max-height: 80vh;    /* در موبایل هم درست نمایش داده میشه */
+  object-fit: contain;
+  border-radius: 12px;
+}
+@media (max-width: 768px) {
+  .screenshot-title {
+    font-size: 1.5rem;
+  }
+
+  .prev, .next {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .fade img {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .screenshot-title {
+    font-size: 1.2rem;
+  }
+
+  .fade img {
+    max-height: 50vh;
+  }
+}
 img {
   width: 100%;
   height: 67vh;
